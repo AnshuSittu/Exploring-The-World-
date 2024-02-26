@@ -1,6 +1,6 @@
 import RestaurantCard from "./RestaurantCard";
 import { useEffect, useState } from "react";
-
+import Spinner from "../../utils/Spinner.gif"
 
 const Body = () => {
   //Local state Variable
@@ -18,12 +18,19 @@ const Body = () => {
 
     const json = await data.json();
 
-    // console.log(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants);
 console.log(json);
+
+// Optional chaining ? 	
+
     setListOfRestaurant(
       json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants
     );
   };
+
+  if(ListOfRestaurant.length === 0){
+    return <img src="{Spinner.gif}" alt="Spinner"/>
+  }
+
 
   return (
     <div className="body">
