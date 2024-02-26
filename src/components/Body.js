@@ -28,7 +28,7 @@ console.log(json);
   };
 
   if(ListOfRestaurant.length === 0){
-    return <img src="{Spinner.gif}" alt="Spinner"/>
+    return <h1>Loading..</h1>
   }
 
 
