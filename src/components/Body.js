@@ -29,12 +29,16 @@ console.log(json);
     );
   };
 
-  if(ListOfRestaurant.length === 0){
-    return <Shimmer/>
-  }
+  //Conditional Rendering 
+  // if(ListOfRestaurant.length === 0){
+  //   return <Shimmer/>
+  // }
 
+  // Use Of Terniory oprator : 
 
-  return (
+  return ListOfRestaurant.length === 0 ?  (
+    <Shimmer/>
+  ) : (
     <div className="body">
       <div className="filter">
         <button
@@ -43,7 +47,7 @@ console.log(json);
             // filter logic here
 
             const filteredList = ListOfRestaurant.filter(
-              (res) => res?.data?.avgRating > 4
+              (res) => res?.data?.avgRating > 3.1
             );
             setListOfRestaurant(filteredList);
           }}
