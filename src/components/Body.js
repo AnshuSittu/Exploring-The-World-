@@ -1,6 +1,8 @@
 import RestaurantCard from "./RestaurantCard";
 import { useEffect, useState } from "react";
-import Spinner from "../../utils/Spinner.gif"
+import Shimmer from "./Shimmer";
+
+
 
 const Body = () => {
   //Local state Variable
@@ -28,7 +30,7 @@ console.log(json);
   };
 
   if(ListOfRestaurant.length === 0){
-    return <h1>Loading..</h1>
+    return <Shimmer/>
   }
 
 
