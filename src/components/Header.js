@@ -15,7 +15,7 @@ const Header = () => {
           <li>About Us</li>
           <li>Contact Us</li>
           <li>Cart</li>
-{/* here we have put condtion if btn is login then Logout and vice versa */}
+          {/* here we have put condtion if btn is login then Logout and vice versa */}
           <button
             className="login"
             onClick={() => {
