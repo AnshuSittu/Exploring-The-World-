@@ -23,15 +23,15 @@ const Body = () => {
 
     const json = await data.json();
 
-    console.log(json);
+    console.log(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
 
     // Optional chaining ?
 
     setListOfRestaurant(
-      json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     setfilteredRestaurant(
-      json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
 
@@ -63,9 +63,7 @@ const Body = () => {
               console.log(searchText);
 
               const filteredRestaurant = ListOfRestaurant.filter((res) =>
-                res.data?.cards[1]?.card?.card?.gridElements.infoWithStyle.restaurants.name
-                  .toLowerCase()
-                  .includes(searchText.toLowerCase())
+              res.info.name.toLowerCase().includes(searchText.toLowerCase())
               );
 
               setfilteredRestaurant(filteredRestaurant);
@@ -80,17 +78,17 @@ const Body = () => {
             // filter logic here
 
             const filteredList = ListOfRestaurant.filter(
-              (res) => res?.data?.avgRating > 3.1
+               (res) => res.info.avgRating > 4
             );
-            setListOfRestaurant(filteredList);
+            setfilteredRestaurant(filteredList);
           }}
         >
           Top Rated Restaurant
         </button>
       </div>
       <div className="res-container">
-        {filteredRestaurant.map((restaurant, index) => (
-          <RestaurantCard key={index} resData={restaurant} />
+        {filteredRestaurant.map((restaurant) => (
+          <RestaurantCard key={restaurant.info.id} resData={restaurant} />
         ))}
       </div>
     </div>
