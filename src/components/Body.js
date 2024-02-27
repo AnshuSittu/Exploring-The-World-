@@ -56,7 +56,7 @@ const Body = () => {
               setSearchText(e.target.value);
             }}
           />
-          <button
+          <button className="btn-search"
             onClick={() => {
               // filter the restraunt cards and update the UI
               // searchText

@@ -51,8 +51,19 @@
   flex-wrap: wrap;
 }
 .filter-btn {
-  margin: 10px;
+  /* background-color: #6420AA; */
+  border: none;
+  color: #6420aa;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 10px;
   cursor: pointer;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 .shimmer-container {
@@ -80,15 +91,35 @@
   }
 }
 
-.login{
+.login {
   padding: 0 20px;
   cursor: pointer;
   border: none;
   text-decoration: none;
   border-radius: 10px;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19)
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
-.filter{
+.filter {
   display: flex;
   padding: 10px;
+  justify-content: space-between;
+}
+.search-box{
+  padding: 10px 15px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.btn-search{
+  color: #6420aa;
+  margin: 5px;
+  padding: 10 20px;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  border-radius: 10px;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
